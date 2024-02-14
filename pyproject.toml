@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "scrappy-db"
+version = "0.1.0"
+description = ""
+authors = ["dbatalha <daniel.p.batalha@sapo.pt>"]
+readme = "README.md"
+packages = [
+	{ include = "scrappy_db/*.py" },
+]
+
+[tool.poetry.scripts]
+scrappy-db = "scrappy_db.start:start"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.2"
+pymongo = "^4.6.1"
+termcolor = "^2.4.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+requests-mock = "^1.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
