@@ -1,0 +1,3 @@
+[submodule "scrappy_db/session"]
+	path = scrappy_db/session
+	url = https://github.com/dbatalha/ScrappyTwitchShared
