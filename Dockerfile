@@ -10,4 +10,5 @@ ENV PYTHONPATH=${PYTHONPATH}:${PWD}
 RUN pip3 install poetry
 RUN poetry config virtualenvs.create false
 RUN poetry install
+RUN sed -i "s|{MONGO_CONNECTION}|${MONGO_CONNECTION}|g" /scrappy-db/scrappy_db/resources/config.ini
 CMD ["poetry", "run", "scrappy-db"]

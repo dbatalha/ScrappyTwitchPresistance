@@ -30,5 +30,8 @@ class MongoDBClient:
     def delete_one(self, key, value):
         return self.mongodb_collection.delete_one({key: value})
 
+    def delete_many(self, key, value):
+        return self.mongodb_collection.delete_many({key: value})
+
     def close(self):
         self.client.close()
